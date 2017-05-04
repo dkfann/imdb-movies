@@ -15,14 +15,18 @@
     "url": "git+https://github.com/davidalekna/imdb-movies.git"
   },
   "scripts": {
-    "build": "webpack --env.dev"
+    "build": "webpack --env.dev",
+    "build:prod": "webpack --env.dev -p"
   },
   "dependencies": {
     "node-fetch": "^1.6.3"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "babel-preset-latest": "^6.24.1",
+    "eslint": "^3.19.0",
     "jest": "^19.0.2",
     "np": "^2.14.1",
     "watch": "^1.0.2",
