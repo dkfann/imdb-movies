@@ -2,12 +2,14 @@ Very simple IMDB Node API for OMDb API from https://www.omdbapi.com/
 
 Can fetch movies, series and episodes by id or title
 
-npm install --save imdb-api
+npm install --save imdb-movies
 
-const imdb = require("imdb-api")
-or es6 import imdb from "imdb-api"
+```
+const imdb = require("imdb-movies")
+or es6 import imdb from "imdb-movies"
 
 const movie = new imdb()
+```
 
 // Get by title or id
 
