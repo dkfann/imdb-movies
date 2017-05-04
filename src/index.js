@@ -1,4 +1,4 @@
-const imdb = require('./imdb.js')
+const imdb = require('./imdb-movies.js')
 
 const movie = new imdb();
 

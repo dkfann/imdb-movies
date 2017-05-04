@@ -2,7 +2,7 @@
   "name": "imdb-movies",
   "version": "0.0.1",
   "description": "IMDB / OMDb async await type API",
-  "main": "./src/index.js",
+  "main": "./src/imdb-movies.js",
   "scripts": {
     "start": "node ./src/index.js"
   },
