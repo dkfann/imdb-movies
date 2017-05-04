@@ -1,14 +1,37 @@
 {
   "name": "imdb-movies",
   "version": "0.0.1",
-  "description": "IMDB / OMDb async await type API",
-  "main": "./src/imdb-movies.js",
-  "scripts": {
-    "start": "node ./src/index.js"
-  },
+  "description": "IMDB / OMDb async await API",
+  "main": "build/index.js",
   "author": "David Alekna",
-  "license": "MIT",
+  "license": "ISC",
+  "keywords": [
+    "imdb",
+    "movies",
+    "imdb api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidalekna/imdb-movies.git"
+  },
+  "scripts": {
+    "dev": "watch 'npm run build' src",
+    "build": "babel src -d build",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
   "dependencies": {
     "node-fetch": "^1.6.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "jest": "^19.0.2",
+    "watch": "^1.0.2"
   }
 }
