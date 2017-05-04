@@ -1,29 +1,31 @@
-## Very simple await async IMDB Node API for OMDb API from [here](https://www.omdbapi.com/)
+## await async IMDB Node API for OMDb API from [here](https://www.omdbapi.com/)
 
 #### Can fetch movies, series and episodes by id or title
 
+#### Available from NPM
+
 ```
-npm install --save imdb-movies or npm i -S imdb-movies
+npm install --save imdb-movies
 ```
+
+#### Installation
 
 ```
 const imdbMovies = require("imdb-movies")
-or es6 import imdbMovies from "imdb-movies"
+alternatively <b>import imdbMovies from "imdb-movies"</b>
 
 const movie = new imdbMovies()
 ```
 
-### Get by title or id
-
-#### accepts 3 parameters
+#### Get by title or id
 
 ```
+<b>function accepts 3 parameters</b>
+
 1. title / id type String | required
 2. season type Int | optional
 3. episode type Int | optional
-```
 
-```
 movie.getByTitle("The Sopranos"); -> returns movie object
 
 movie.getById("tt0141842", 1, 2); -> returns episode object
