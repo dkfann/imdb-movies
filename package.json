@@ -24,8 +24,7 @@
   },
   "babel": {
     "presets": [
-      "latest",
-      "stage-0"
+      "latest"
     ]
   },
   "dependencies": {
@@ -37,6 +36,7 @@
     "babel-loader": "^7.0.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "jest": "^19.0.2",
