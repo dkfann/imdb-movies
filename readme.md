@@ -5,7 +5,7 @@
 #### Available from NPM
 
 ```
-npm install --save imdb-movies
+$ npm install imdb-movies --save
 ```
 
 #### Installation
