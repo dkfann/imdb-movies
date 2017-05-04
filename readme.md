@@ -16,9 +16,9 @@ const movie = new imdbMovies()
 accepts 3 parameters
 
 ```
-1. title / id type String
-2. season type Int
-3. episode type Int
+1. title / id type String | required
+2. season type Int | optional
+3. episode type Int | optional
 ```
 
 ```
