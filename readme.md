@@ -1,3 +1,5 @@
+# CURRENTLY NOT WORKING
+
 ## IMDB Movies, await async OMDb API from [here](https://www.omdbapi.com/)
 
 #### Can fetch movies, series and episodes by id or title from IMDB
