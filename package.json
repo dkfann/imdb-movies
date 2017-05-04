@@ -23,13 +23,8 @@
     "release": "np"
   },
   "babel": {
-    "presets": [
-      "latest"
-    ],
-    "plugins": [
-      "syntax-async-functions",
-      "transform-regenerator"
-    ]
+    "presets": ["latest"],
+    "plugins": ["transform-async-to-generator"]
   },
   "dependencies": {
     "node-fetch": "^1.6.3"
@@ -38,6 +33,7 @@
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2017": "^6.24.1",
