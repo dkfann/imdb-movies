@@ -16,7 +16,7 @@
   },
   "scripts": {
     "dev": "watch 'npm run build' src",
-    "build": "babel src -d build",
+    "build": "babel --plugins transform-async-to-generator src -d build",
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "prepublish": "npm run build",
