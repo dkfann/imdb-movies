@@ -1,6 +1,6 @@
 {
   "name": "imdb-movies",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "IMDB / OMDb async await API",
   "main": "build/index.js",
   "author": "David Alekna",
@@ -23,8 +23,13 @@
     "release": "np"
   },
   "babel": {
-    "presets": ["latest"],
-    "plugins": ["syntax-async-functions","transform-regenerator"]
+    "presets": [
+      "latest"
+    ],
+    "plugins": [
+      "syntax-async-functions",
+      "transform-regenerator"
+    ]
   },
   "dependencies": {
     "node-fetch": "^1.6.3"
