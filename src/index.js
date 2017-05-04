@@ -1,4 +1,4 @@
-import fetch from "node-fetch"
+const fetch = require('node-fetch');
 
 class imdbMovies {
 	async fetchImdbMovie(endpoint) {
@@ -49,8 +49,8 @@ class imdbMovies {
 	}
 
 	hello() {
-		return 'hello world' 
+		return 'hello world'
 	}
 }
 
-export default imdbMovies
+module.exports = imdbMovies

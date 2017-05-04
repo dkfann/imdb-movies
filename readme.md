@@ -19,7 +19,7 @@ const movie = new imdbMovies()
 
 #### Get by title or id
 
-```
+```shell
 <b>function accepts 3 parameters</b>
 
 1. title / id type String | required
@@ -41,7 +41,7 @@ movie.getById("tt0141842", 1); -> returns following object with episodes in Epis
 ```
 #### Movie object looks as follows
 
-```
+```shell
 {
 	Title: 'The Sopranos',
 	Year: '1999–2007',
