@@ -23,9 +23,8 @@
     "release": "np"
   },
   "babel": {
-    "presets": [
-      "latest"
-    ]
+    "presets": ["latest"],
+    "plugins": ["syntax-async-functions","transform-regenerator"]
   },
   "dependencies": {
     "node-fetch": "^1.6.3"
