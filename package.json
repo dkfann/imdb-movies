@@ -1,0 +1,14 @@
+{
+  "name": "imdb-movies",
+  "version": "0.0.1",
+  "description": "IMDB / OMDb async await type API",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "David Alekna",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^1.6.3"
+  }
+}
