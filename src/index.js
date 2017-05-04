@@ -1,6 +1,6 @@
-const imdb = require('./imdb-movies.js')
+const imdbMovies = require('./imdb-movies.js')
 
-const movie = new imdb();
+const movie = new imdbMovies();
 
 // movie.getByTitle("The Sopranos", 1);
-movie.getById("tt0141842", 1);
+movie.getById("tt0141842");

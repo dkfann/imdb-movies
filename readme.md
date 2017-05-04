@@ -5,10 +5,10 @@ Can fetch movies, series and episodes by id or title
 npm install --save imdb-movies
 
 ```
-const imdb = require("imdb-movies")
-or es6 import imdb from "imdb-movies"
+const imdbMovies = require("imdb-movies")
+or es6 import imdbMovies from "imdb-movies"
 
-const movie = new imdb()
+const movie = new imdbMovies()
 ```
 
 // Get by title or id
