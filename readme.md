@@ -1,6 +1,6 @@
-## await async IMDB Node API for OMDb API from [here](https://www.omdbapi.com/)
+## IMDB Movies, await async OMDb API from [here](https://www.omdbapi.com/)
 
-#### Can fetch movies, series and episodes by id or title
+#### Can fetch movies, series and episodes by id or title from IMDB
 
 #### Available from NPM
 
@@ -30,13 +30,13 @@ movie.getByTitle("The Sopranos"); -> returns movie object
 
 movie.getById("tt0141842", 1, 2); -> returns episode object
 
-movie.getById("tt0141842", 1); -> returns following object
+movie.getById("tt0141842", 1); -> returns following object with episodes in Episodes array
 
 {
 	Title: 'The Sopranos',
 	Season: '1',
 	totalSeasons: '6',
-	Episodes: []
+	Episodes: [...]
 }
 ```
 #### Movie object looks as follows
