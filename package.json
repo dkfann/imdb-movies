@@ -16,7 +16,11 @@
   },
   "scripts": {
     "build": "webpack --env.dev",
-    "build:prod": "webpack --env.dev -p"
+    "build:prod": "webpack --env.dev -p",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "prepublish": "npm run build:prod",
+    "release": "np"
   },
   "dependencies": {
     "es6-promise": "^4.1.0",
