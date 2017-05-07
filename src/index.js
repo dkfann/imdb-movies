@@ -1,4 +1,5 @@
-const fetch = require('node-fetch');
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
 
 class imdbMovies {
 	async fetchImdbMovie(endpoint) {
@@ -23,7 +24,7 @@ class imdbMovies {
 			const Season = season ? `&Season=${season}` : "";
 			const Episode = episode ? `&Episode=${episode}` : "";
 			const movie = await this.fetchImdbMovie(`/?t=${title}${Season}${Episode}`);
-			console.log(movie);
+			// console.log(movie);
 			return movie;
 		} catch (err) {
 			console.error(`Error: ${err.message}`);
@@ -41,7 +42,7 @@ class imdbMovies {
 			const Season = season ? `&Season=${season}` : "";
 			const Episode = episode ? `&Episode=${episode}` : "";
 			const movie = await this.fetchImdbMovie(`/?i=${id}${Season}${Episode}`);
-			console.log(movie);
+			// console.log(movie);
 			return movie;
 		} catch (err) {
 			console.error(`Error: ${err.message}`);
