@@ -1,4 +1,4 @@
-import imdbMovies from '.'
+import {imdbMovies} from '.'
 
 const movie  = new imdbMovies();
 
