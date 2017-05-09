@@ -12,7 +12,7 @@ $ npm install imdb-movies --save
 
 ```shell
 const {imdbMovies} = require("imdb-movies")
-es6 import imdbMovies from "imdb-movies"
+es6 import {imdbMovies} from "imdb-movies"
 
 const movie = new imdbMovies()
 ```
