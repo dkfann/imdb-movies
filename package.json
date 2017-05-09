@@ -1,6 +1,6 @@
 {
   "name": "imdb-movies",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "IMDB / OMDb async await API",
   "main": "dist/bundle.js",
   "author": "David Alekna",
