@@ -12,7 +12,7 @@ $ npm install imdb-movies --save
 
 ```shell
 const {imdbMovies} = require("imdb-movies")
-es6 import imdbMovies from "imdb-movies"
+es6 import {imdbMovies} from "imdb-movies"
 
 const movie = new imdbMovies()
 ```
@@ -79,6 +79,7 @@ const movie = new imdbMovies();
 class App extends Component {
   async componentDidMount() {
     const object = await movie.getByTitle('The Sopranos');
+		console.log(object)
   }
 }
 
