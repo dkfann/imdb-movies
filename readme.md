@@ -77,10 +77,10 @@ import { imdbMovies } from 'imdb-movies'
 const movie = new imdbMovies();
 
 class App extends Component {
-  async componentDidMount() {
+	async componentDidMount() {
 		const object = await movie.getByTitle('The Sopranos');
 		console.log(object)
-  }
+	}
 }
 
 export default App
