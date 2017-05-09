@@ -1,7 +1,7 @@
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
 
-class imdbMovies {
+export class imdbMovies {
 	async fetchImdbMovie(endpoint) {
 		const url = `https://www.omdbapi.com${endpoint}`;
 		const response = await fetch(url);
@@ -23,9 +23,7 @@ class imdbMovies {
 		try {
 			const Season = season ? `&Season=${season}` : "";
 			const Episode = episode ? `&Episode=${episode}` : "";
-			const movie = await this.fetchImdbMovie(`/?t=${title}${Season}${Episode}`);
-			// console.log(movie);
-			return movie;
+			return await this.fetchImdbMovie(`/?t=${title}${Season}${Episode}`);
 		} catch (err) {
 			console.error(`Error: ${err.message}`);
 		}
@@ -41,9 +39,7 @@ class imdbMovies {
 		try {
 			const Season = season ? `&Season=${season}` : "";
 			const Episode = episode ? `&Episode=${episode}` : "";
-			const movie = await this.fetchImdbMovie(`/?i=${id}${Season}${Episode}`);
-			// console.log(movie);
-			return movie;
+			return await this.fetchImdbMovie(`/?i=${id}${Season}${Episode}`);
 		} catch (err) {
 			console.error(`Error: ${err.message}`);
 		}
@@ -53,5 +49,3 @@ class imdbMovies {
 		return 'hello world'
 	}
 }
-
-module.exports = imdbMovies

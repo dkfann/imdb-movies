@@ -1,5 +1,3 @@
-# CURRENTLY NOT WORKING
-
 ## IMDB Movies, await async OMDb API from [here](https://www.omdbapi.com/)
 
 #### Can fetch movies, series and episodes by id or title from IMDB
@@ -12,9 +10,9 @@ $ npm install imdb-movies --save
 
 #### Installation
 
-```
-const imdbMovies = require("imdb-movies")
-alternatively <b>import imdbMovies from "imdb-movies"</b>
+```shell
+const {imdbMovies} = require("imdb-movies")
+es6 import imdbMovies from "imdb-movies"
 
 const movie = new imdbMovies()
 ```
@@ -41,6 +39,7 @@ movie.getById("tt0141842", 1); -> returns following object with episodes in Epis
 	Episodes: [...]
 }
 ```
+
 #### Movie object looks as follows
 
 ```shell
@@ -67,4 +66,21 @@ movie.getById("tt0141842", 1); -> returns following object with episodes in Epis
 	totalSeasons: '6',
 	Response: 'True'
 }
+```
+
+### React example
+
+```shell
+import React, { Component } from 'react'
+import { imdbMovies } from 'imdb-movies'
+
+const movie = new imdbMovies();
+
+class App extends Component {
+  async componentDidMount() {
+    const object = await movie.getByTitle('The Sopranos');
+  }
+}
+
+export default App
 ```
