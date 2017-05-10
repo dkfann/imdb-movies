@@ -19,7 +19,7 @@
     "build:prod": "webpack --env.dev -p",
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build:prod",
     "release": "np"
   },
   "dependencies": {
