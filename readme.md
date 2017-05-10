@@ -28,7 +28,7 @@ const sopranos = async () => {
 
   const moviePromise = m.getByTitle('The Sopranos')
   const episodePromise = m.getById("tt0141842", 1, 2)
-	const episodesPromise = m.getById("tt0141842", 1)
+  const episodesPromise = m.getById("tt0141842", 1)
 
   const movie = await moviePromise; // returns movie object
   const episode = await episodePromise; // returns episode object
