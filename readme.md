@@ -21,14 +21,14 @@ import {imdbMovies} from "imdb-movies"
 const m = new imdbMovies();
 
 const sopranos = async () => {
-	// Accepts 3 parameters
-	// 1. title / id type String | required
-	// 2. season type Int | optional
-	// 3. episode type Int | optional
+  // Accepts 3 parameters
+  // 1. title / id type String | required
+  // 2. season type Int | optional
+  // 3. episode type Int | optional
 
   const moviePromise = m.getByTitle('The Sopranos')
-  const episodePromise = m.getById("tt0141842", 1, 2) // returns episode object
-  const episodesPromise = m.getById("tt0141842", 1)
+  const episodePromise = m.getById("tt0141842", 1, 2)
+	const episodesPromise = m.getById("tt0141842", 1)
 
   const movie = await moviePromise; // returns movie object
   const episode = await episodePromise; // returns episode object
