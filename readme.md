@@ -12,25 +12,58 @@ $ npm install imdb-movies --save
 
 ```shell
 const {imdbMovies} = require("imdb-movies")
-es6 import {imdbMovies} from "imdb-movies"
-
-const movie = new imdbMovies()
+import {imdbMovies} from "imdb-movies"
 ```
 
 #### Get by title or id
 
 ```shell
-<b>function accepts 3 parameters</b>
+const m = new imdbMovies();
 
-1. title / id type String | required
-2. season type Int | optional
-3. episode type Int | optional
+const sopranos = async () => {
+	// Accepts 3 parameters
+	// 1. title / id type String | required
+	// 2. season type Int | optional
+	// 3. episode type Int | optional
 
-movie.getByTitle("The Sopranos"); -> returns movie object
+  const moviePromise = m.getByTitle('The Sopranos')
+  const episodePromise = m.getById("tt0141842", 1, 2) // returns episode object
+  const episodesPromise = m.getById("tt0141842", 1)
 
-movie.getById("tt0141842", 1, 2); -> returns episode object
+  const movie = await moviePromise; // returns movie object
+  const episode = await episodePromise; // returns episode object
+  const episodes = await episodesPromise; // returns following object with episodes in Episodes array
 
-movie.getById("tt0141842", 1); -> returns following object with episodes in Episodes array
+  console.log(movie, episode, episodes) // 3 objects
+  console.log(episodes.Episodes.length) // 13
+}
+
+sopranos()
+```
+
+### React example
+
+```shell
+import React, { Component } from 'react'
+import { imdbMovies } from 'imdb-movies'
+
+const movie = new imdbMovies();
+
+class App extends Component {
+	async componentDidMount() {
+		const object = await movie.getByTitle('The Sopranos');
+		console.log(object)
+	}
+}
+
+export default App
+```
+
+#### Episodes and Movie object
+
+```shell
+
+Episodes
 
 {
 	Title: 'The Sopranos',
@@ -38,11 +71,9 @@ movie.getById("tt0141842", 1); -> returns following object with episodes in Epis
 	totalSeasons: '6',
 	Episodes: [...]
 }
-```
 
-#### Movie object looks as follows
+Movie
 
-```shell
 {
 	Title: 'The Sopranos',
 	Year: '1999–2007',
@@ -66,22 +97,4 @@ movie.getById("tt0141842", 1); -> returns following object with episodes in Epis
 	totalSeasons: '6',
 	Response: 'True'
 }
-```
-
-### React example
-
-```shell
-import React, { Component } from 'react'
-import { imdbMovies } from 'imdb-movies'
-
-const movie = new imdbMovies();
-
-class App extends Component {
-	async componentDidMount() {
-		const object = await movie.getByTitle('The Sopranos');
-		console.log(object)
-	}
-}
-
-export default App
 ```
